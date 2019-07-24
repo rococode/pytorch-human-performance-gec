@@ -9,7 +9,7 @@ def process(src_dir, out_dir, dataset):
     tgt_filename = os.path.join(out_dir, 'lang8-' + dataset + '.gec')
     rtl_src_filename = os.path.join(out_dir, 'lang8-' + dataset + '-rtl.en')
     rtl_tgt_filename = os.path.join(out_dir, 'lang8-' + dataset + '-rtl.gec')
-    with open(entry_filename, 'r') as entry_file, open(src_filename, 'w') as src_out, open(tgt_filename, 'w') as tgt_out, open(rtl_src_filename, 'w') as rtl_src_out, open(rtl_tgt_filename, 'w') as rtl_tgt_out:
+    with open(entry_filename, 'r') as entry_file, open(src_filename, 'w+') as src_out, open(tgt_filename, 'w+') as tgt_out, open(rtl_src_filename, 'w+') as rtl_src_out, open(rtl_tgt_filename, 'w+') as rtl_tgt_out:
         for line in entry_file:
             line = line.strip()
             if (len(line) == 0):
